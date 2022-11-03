@@ -5,7 +5,7 @@ on:
     branches: [ master ]
   
 env: 
-  PUBLISH_PATH: "../project"
+  PUBLISH_PATH: "."
   DOTNET_VERSION: "6.0.X"
 
 jobs:
@@ -22,5 +22,5 @@ jobs:
       run: dotnet restore
     - name: build
       run: dotnet build --configuration Release --no-restore
-    - name: piblish
+    - name: publish
       run: dotnet publish --configuration Release -o '${{ PUBLISH_PATH }}'
