@@ -6,7 +6,7 @@ on:
   
 env: 
   PUBLISH_PATH: "."
-  DOTNET_VERSION: "6.0.X"
+  DOTNET_VERSION: "6.X.0"
 
 jobs:
   build: 
