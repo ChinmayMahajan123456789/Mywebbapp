@@ -17,10 +17,10 @@ jobs:
     - name: set up dotnet core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: ${ DOTNET_VERSION }
+        dotnet-version: ${ env.DOTNET_VERSION }
     - name: install dependencies
       run: dotnet restore
     - name: build
       run: dotnet build --configuration Release --no-restore
     - name: publish
-      run: dotnet publish --configuration Release -o '${{ PUBLISH_PATH }}'/publish
+      run: dotnet publish --configuration Release -o '${{ env.PUBLISH_PATH }}'/publish
